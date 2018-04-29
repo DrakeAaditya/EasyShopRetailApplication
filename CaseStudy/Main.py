@@ -43,7 +43,6 @@ class Address(Customer):
         self._zipcode =zipcode
         self._state=state
         
-    ty
     def setadddresLine(self,addre):
         self._addressLine=addre
         
