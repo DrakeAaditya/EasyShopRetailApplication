@@ -1,0 +1,2 @@
+# EasyShopRetailApplication
+Easy shop wants to automate their customer details in system. The automation involves in maintenance of customers information’s. Customers can be regular or privileged customers. Customers who are regular visitors to the store are eligible for discount on the bill amount. The privileged customers are given membership cards (Platinum, Gold and Silver). Such customers are eligible for gifts based on the type of membership card. Customers address are maintained for free home delivery of the products.
