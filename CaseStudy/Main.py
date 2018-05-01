@@ -1,70 +1,52 @@
-'''
-Created on Apr 30, 2018
+print("********************************************************")
+print("\t\t\tEasy Shop")
+print("********************************************************")
+print("   1. Add New Customer")
+print("   2. Modify\n\ta. Customer Name\n\tb. Customer Contact\n\tc. Customer Address\n\td. Customer Type\n\te. Discount %\n\tf. Membership Card Type")
+print("   3. View All Customer")
+print("   4. View All Regular Customer")
+print("   5. View All Privileged Customer")
+print("   6. Exit")
 
-@author: addyr
-'''
-class Customer:
-    def _init_(self,customerid,customername,telephoneno,addressid):
-        self._customerid=customerid
-        self._customername=customername
-        self._telephoneno = telephoneno
-        self._addressid = addressid
+choice = int(input("\nEnter your choice > "))
+print(choice)
 
-    def setcustomerid(self,cid):
-        self._customerid=cid
-        
-    def setcustomername(self,customername):
-        self._customername=customername
+if (choice == 1):
+    customername = input("Enter Customer Name > ")
+    tele = input("Enter Customer Telephone Number > ")
+    print("Enter Address")
+    addre = input("Enter Address Line > ")
+    city = input("Enter City > ")
+    zipcode = input("Enter ZipCode > ")
+    state = input("Enter State")
+    customertype = input("Enter Customer Type > ")
+if (choice == 2):
+    subchoice = input("Enter Sub Choice > ")
+    if (subchoice == 'a'):
+        newcustomername = input("Enter New Name > ")
+    if (subchoice == 'b'):
+        newcustomertele = input("Enter New Telephone No. > ")
+    if (subchoice == 'c'):
+        print("Enter New Address")
+        newaddre = input("Enter New Address Line > ")
+        newcity = input("Enter New City > ")
+        newzipcode = input("Enter New ZipCode > ")
+        newstate = input("Enter New State")
+    if (subchoice == 'd'):
+        newcustomertype = input("Enter New Customer Type > ")
+    if (subchoice == 'e'):
+        newdiscount = float(input("Enter new Discount"))
+    if (subchoice == 'f'):
+        if(newcustomertype == 'Regular'):
+            print("No Card Type Available for You")
+        if(newcustomertype == 'Priviledged'):
+            newmemcardtype = input("Enter New Membership Card Type > ")
+if(choice == 3):
+    print("All")
+if(choice == 4):
+    print("Regular Customer")
+if(choice == 5):
+    print("Privileged Customer")
+if(choice == 6):
+    exit(0)
     
-    def settelephoneno(self,tele):
-        self._telephoneno=tele
-    
-    def setaddress(self,addr):
-        self._addressid=addr
-        
-    def getcustomerid(self):
-        return self._customerid
-    
-    def gettelephoneno(self):
-        return self._telephoneno
-    
-    def getcustomername(self):
-        return self._customername 
-    
-    def getaddress(self):
-        return self._addressid
-    
-
-class Address(Customer):
-    def __init__(self,addressid,addressLine,city,zipcode,state):
-        self._addressid=addressid
-        self._addressLine = addressLine
-        self._city=city
-        self._zipcode =zipcode
-        self._state=state
-        
-    def setadddresLine(self,addre):
-        self._addressLine=addre
-        
-    def setcity(self,city):
-        self._city=city
-        
-    def setzipcode(self,zipcode):
-        self._zipcode=zipcode
-        
-    def setstate(self,state):
-        self._state=state
-        
-    def getaddressLine(self):
-        return self._addressLine
-        
-    def getaddressid(self):
-        return self._addressid
-    
-    def getcity(self):
-        return self._city
-    
-    def getstate(self):
-        return self._state
-    
-    def validzipcode(self):
