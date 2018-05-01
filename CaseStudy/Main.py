@@ -1,3 +1,8 @@
+import mysql.connector
+connection = mysql.connector.connect(host='localhost',database='easyshop',user='root',password='aaditya')
+cur = connection.cursor();
+
+
 print("********************************************************")
 print("\t\t\tEasy Shop")
 print("********************************************************")
@@ -42,11 +47,17 @@ if (choice == 2):
         if(newcustomertype == 'Priviledged'):
             newmemcardtype = input("Enter New Membership Card Type > ")
 if(choice == 3):
-    print("All")
+    cur.execute("SELECT * FROM customer")
+    for row in cur.fetchall():
+        print(row)
 if(choice == 4):
-    print("Regular Customer")
+    cur.execute("SELECT * FROM customer WHERE customertype ='Regular'")
+    for row in cur.fetchall():
+        print(row)
 if(choice == 5):
-    print("Privileged Customer")
+    cur.execute("SELECT * FROM customer WHERE customertype ='Privileged'")
+    for row in cur.fetchall():
+        print(row)
 if(choice == 6):
     exit(0)
     
