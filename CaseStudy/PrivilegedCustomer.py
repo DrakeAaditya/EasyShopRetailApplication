@@ -14,3 +14,6 @@ class RegularCustomer(Customer):
     
     def displaycustomerinformstion(self):
         return self._Customer       
+
+rc = RegularCustomer()
+rc.setmemcardtype(input("Enter Card Type > "))

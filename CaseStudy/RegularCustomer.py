@@ -12,4 +12,4 @@ class RegularCustomer(Customer):
         return self._discount
     
     def displaycustomerinformstion(self):
-        return self._Customer       
+        return self._Customer
