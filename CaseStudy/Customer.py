@@ -76,7 +76,7 @@ if (choice == 1):
     connection.commit()
     
     cur.execute("""INSERT INTO address(addressline,city,zip,state,addressid) 
-                VALUES(%s,%s,%s,%s,(SELECT addressid FROM customer WHERE customername = %s)))""",
+                VALUES(%s,%s,%s,%s,(SELECT addressid FROM customer WHERE customername = %s))""",
                 (z.getaddressLine(),z.getcity(),z.validzipcode(),z.getstate(),cus.getcustomername()))
     connection.commit()
     
